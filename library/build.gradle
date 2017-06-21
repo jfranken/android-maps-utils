@@ -65,9 +65,7 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-signing {
-    sign configurations.archives
-}
+
 
 if (!hasProperty("sonatypeUsername")) {
     sonatypeUsername = ""
