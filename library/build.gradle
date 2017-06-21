@@ -56,16 +56,14 @@ task apklib(type: Zip) {
     }
 }
 
-artifacts {
-    archives apklib
-}
-
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
 }
 
-
+artifacts {
+    archives sourcesJar
+}
 
 if (!hasProperty("sonatypeUsername")) {
     sonatypeUsername = ""
